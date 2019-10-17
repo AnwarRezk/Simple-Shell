@@ -12,7 +12,7 @@
 ///Command Handling Functions
 
 //a funtion to check child type
-//background or not aac (&)
+//background or not (&)
 int check_bgp(char line[]){
 int bgp = 0;
 if(line[strlen(line)-1] == '&'){
