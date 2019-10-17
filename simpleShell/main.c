@@ -35,6 +35,7 @@ line[i]='\0';
 //a function to read the whole command
 //from console
 void read_line(char line[]){
+printf("~$ ");
 fgets(line,MAX_CHARS,stdin);
 remove_nl(line);
 if(strcmp(line,"exit") == 0){
@@ -97,7 +98,6 @@ void main()
 
     //shell session loop
     while(1){
-        printf("~$ ");
 
         f = read_cmd(args,line); //returns a flag of child type(bg or not)
         pid_t PID = fork(); //forking a child
